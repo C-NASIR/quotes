@@ -5,6 +5,7 @@ const app = express();
 // body parser
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
+app.disable("x-powered-by"); // do not identify Express
 
 app.use((req, res) => {
   res.render("home");
