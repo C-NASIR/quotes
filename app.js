@@ -1,9 +1,8 @@
-const express = require("express");
-const bodyParser = require("body-parser");
+import express from "express";
 const app = express();
 
 // body parser
-app.use(bodyParser.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
 app.use((req, res) => {
