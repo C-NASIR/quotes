@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <title>Add product</title>
+    <meta name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" />
+  </head>
+  <body>
+    <%- include('includes/navigation.ejs') %>
+    <p>hello world from create-post</p>
+
+    <form action="/add-post" method="post">
+      <label for="post"> create your product </label>
+      <input type="hidden" name="userId" value="<% userId %>" />
+      <textarea name="post" rows="4"> </textarea>
+      <input type="submit" />
+    </form>
+  </body>
+</html>

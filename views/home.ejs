@@ -3,10 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" />
-    <title>Title</title>
+    <title><%= title %></title>
     <meta name="description" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" />
   </head>
-  <body></body>
+  <body>
+    <%- include('includes/navigation.ejs') %>
+    <h1>List of posts</h1>
+    <% if (posts.length > 0) { %> <% for (const post of posts) { %>
+    <p><% post.body %></p>
+    <% } %> <% } else {%>
+    <p>There are no posts</p>
+    <% } %>
+  </body>
 </html>

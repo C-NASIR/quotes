@@ -2,6 +2,8 @@ import express from "express";
 import sequelize from "./util/database.js";
 import { connectModels } from "./util/associations.js";
 import User from "./models/user.js";
+import admin from "./routes/admin.js";
+import general from "./routes/general.js";
 
 const app = express();
 
@@ -14,7 +16,7 @@ app.use((req, res, next) => {
   //temp needed for posts
   User.findByPk(1)
     .then((user) => {
-      req.body.user = user;
+      req.user = user;
       next();
     })
     .catch((err) => {
@@ -23,10 +25,8 @@ app.use((req, res, next) => {
     });
 });
 
-app.use((req, res) => {
-  res.render("home");
-  console.log("still going after ward lol");
-});
+app.use(admin);
+app.use(general);
 
 const port = process.env.PORT || 3000;
 connectModels(); // connecting models
