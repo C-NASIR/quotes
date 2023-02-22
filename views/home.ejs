@@ -12,7 +12,7 @@
     <%- include('includes/navigation.ejs') %>
     <h1>List of posts</h1>
     <% if (posts.length > 0) { %> <% for (const post of posts) { %>
-    <p><% post.body %></p>
+    <p><%= post.body %></p>
     <% } %> <% } else {%>
     <p>There are no posts</p>
     <% } %>

@@ -1,5 +1,4 @@
 import Post from "../models/post.js";
-import User from "../models/user.js";
 
 export async function getHomeView(req, res) {
   try {
@@ -15,4 +14,14 @@ export function getAddProductView(req, res) {
   res.render("add-post", { userId: req.user.id });
 }
 
-export const addPost = async (req, res) => {};
+export const addPost = async (req, res) => {
+  try {
+    const post = await Post.create({ body: req.body.post });
+    req.user.addPost(post);
+    await req.user.save();
+    res.redirect("/");
+  } catch (err) {
+    console.log("can't add a post ", err);
+    res.redirect("/");
+  }
+};
