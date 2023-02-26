@@ -1,0 +1,46 @@
+main {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+
+nav {
+  width: 70%;
+  margin: auto;
+  padding: 1em;
+  background-color: #53addd;
+}
+
+nav > a {
+  text-decoration: none;
+  color: white;
+}
+
+nav > a:hover {
+  text-decoration: underline;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="submit"] {
+  display: block;
+  padding: 1.3em 0.5em;
+  border-style: revert;
+  margin: 0.5em auto;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 70%;
+}
+
+input[type="submit"] {
+  width: 73%;
+}
+
+.quote {
+  background-color: gray;
+  padding: 1em;
+  margin: 0.5em 0;
+  color: white;
+}
