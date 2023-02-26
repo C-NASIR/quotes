@@ -11,6 +11,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.disable("x-powered-by"); // do not identify Express
+app.use(express.static("public"));
 
 app.use((req, res, next) => {
   //temp needed for posts
