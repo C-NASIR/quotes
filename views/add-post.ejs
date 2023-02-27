@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="css/add-post.css" />
   </head>
   <body>
+    <%- include('includes/navigation.ejs') %>
     <main>
-      <%- include('includes/navigation.ejs') %>
       <form action="/add-post" method="post">
         <input type="hidden" name="userId" value="<% userId %>" />
         <textarea name="post" rows="4"> </textarea>
