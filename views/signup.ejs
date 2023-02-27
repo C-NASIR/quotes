@@ -4,10 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>signup</title>
+    <link rel="stylesheet" href="css/sign-up.css" />
   </head>
   <body>
     <%- include('includes/navigation.ejs') %>
-    <p>Sign Up</p>
+    <main>
+      <h1>Login</h1>
+      <form>
+        <input type="text" name="text" placeholder="username" />
+        <input type="email" name="email" placeholder="email" />
+        <input type="password" name="password" placeholder="password" />
+        <input
+          type="password"
+          name="confirmed-password"
+          placeholder="confirmed-password"
+        />
+        <input type="submit"
+      </form>
+      <div class="links">
+        <a href="/login"> Login </a>
+      </div>
+    </main>
   </body>
 </html>

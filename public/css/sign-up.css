@@ -21,6 +21,7 @@ nav > a:hover {
 }
 
 input[type="email"],
+input[type="text"],
 input[type="password"],
 input[type="submit"] {
   display: block;
@@ -30,6 +31,7 @@ input[type="submit"] {
 }
 
 input[type="email"],
+input[type="text"],
 input[type="password"] {
   width: 70%;
 }
@@ -38,10 +40,13 @@ input[type="submit"] {
   width: 73%;
 }
 
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
 .links {
-  display: flex;
-  justify-content: space-between;
-  width: 74%;
+  text-align: start;
+  width: 70%;
   margin: auto;
 }
 
