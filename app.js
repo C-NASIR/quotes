@@ -1,5 +1,6 @@
 import express from "express";
 import sequelize from "./util/database.js";
+import session from "./middleware/session.js";
 import { connectModels } from "./util/associations.js";
 import User from "./models/user.js";
 import admin from "./routes/admin.js";
@@ -12,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.disable("x-powered-by"); // do not identify Express
 app.use(express.static("public"));
+app.use(session);
 
 app.use((req, res, next) => {
   //temp needed for posts
